@@ -1,7 +1,64 @@
 <!DOCTYPE html>
-<html>
-	<body>
-		<h1>Hello World</h1>
-		<p>I'm hosted with GitHub Pages.</p>
-	</body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body > * {
+            border: 1px dotted black;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body id="body">
+
+    <script>
+        var header = document.createElement("header");
+        header.className = "ylatunniste";
+        var h1 = document.createElement("h1");
+        var h1Node = document.createTextNode("Tämä on otsikko");
+        h1.appendChild(h1Node);
+        header.appendChild(h1);        
+
+        var para1 = document.createElement("p");
+        var par1Text = document.createTextNode("Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quibusdam, vel neque est officiis, similique eligendi molestiae veniam, saepe voluptate possimus nam ea deserunt inventore aperiam maxime temporibus accusamus. Consequatur.");
+        para1.appendChild(par1Text);
+
+        var section = document.createElement("section");
+        section.style.display = "flex";
+        section.className = "rinnakkain";
+        var para2 = document.createElement("p");
+        var par2Node = document.createTextNode("Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni obcaecati omnis fugiat architecto iste explicabo dolorem consequuntur quos! Tempore molestias architecto distinctio repudiandae aliquam quaerat qui assumenda ad, at molestiae?");
+
+        var figure = document.createElement("figure");
+        figure.className = "kuvapaikka";
+        var kuva = document.createElement("img");
+        kuva.src = "https://payyourintern.com/wp-content/uploads/2020/08/Google.png";
+        kuva.style = "max-width: 100%; height: auto;";
+
+        para2.appendChild(par2Node);
+        figure.appendChild(kuva);
+        section.appendChild(para2);
+        section.appendChild(figure);
+
+        var footer = document.createElement("footer");
+        var para3 = document.createElement("p");
+        var par3Node = document.createTextNode("© Riku Salolainen 2020");
+        para3.appendChild(par3Node);
+        footer.appendChild(para3);
+
+        body.appendChild(header);
+        body.appendChild(para1);
+        body.appendChild(section);
+        body.appendChild(footer);
+
+
+    </script>
+
+</body>
+
 </html>
